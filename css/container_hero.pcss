@@ -1,0 +1,43 @@
+/*
+    ========================================
+        ::container_hero
+    ========================================
+*/
+.container_hero {
+  @apply --theme_ebsco-light-blue;
+}
+  .container_hero a {
+    color: rgb( 255, 255, 255 );
+  }
+  .container_hero a:hover {
+    border-color: rgb( 255, 255, 255 );
+  }
+.container_hero > .inner {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.container_hero .btn .btn-target {
+  background: transparent;
+  border: 1px solid rgb( 255, 255, 255 );
+  color: rgb( 255, 255, 255 );
+}
+
+/* header and icon */
+.container_hero .image_header-icon {
+    float: left;
+    margin-top: -16px;
+    transform: scale(0.7);
+}
+.container_hero h1 {
+    font-size: 26px;
+}
+
+@media screen and (min-width: 801px) {
+  .container_hero .image_header-icon {
+    margin-top: 0;
+    transform: scale(1);
+  }
+  .container_hero h1 {
+    font-size: 44px;
+  }
+}

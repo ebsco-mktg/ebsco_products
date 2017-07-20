@@ -1,0 +1,36 @@
+/*
+    ========================================
+        ::framework add-ins
+    ========================================
+*/
+.content-row {
+  clear: left;
+}
+.content-flush {
+  padding: 0;
+}
+
+.extLink {
+  position: relative;
+}
+.extLink::after {
+  background: url( /files/img/All_icons.png) 0 -2600px no-repeat;
+  bottom: 3px;
+  content: '';
+  display: inline-block;
+  height: 12px;
+  position: absolute;
+  right: -16px;
+  width: 12px;
+}
+
+@keyframes fadein {
+  0% { background: rgba( 0, 47, 86, 0.95 ); opacity: 0; z-index: -1; }
+  1% { opacity: 0; z-index: 999; }
+  100% { background: rgba( 0, 47, 86, 0.95 ); opacity: 1; }
+}
+@keyframes fadeout {
+  0% { background: rgba( 0, 47, 86, 0.95 ); opacity: 1; z-index: 999; }
+  99% { opacity: 0; z-index: 999; }
+  100% { background: rgba( 0, 47, 86, 0.95 ); opacity: 0; z-index: -1; }
+}

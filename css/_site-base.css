@@ -1,0 +1,44 @@
+/* default line-height */
+/* html { line-height: 1.5; } */
+html {
+  @apply --font_standard;
+}
+
+
+/* spacing between typography elements */
+h1, h2, h3, h4, h5, h6, p, ul { margin: 0 0 16px; }
+h1 {
+  font: 300 44px/1.5 var(--myriad-pro-regular);
+}
+h2 {
+  font: 400 26px/1.5 var(--myriad-pro-regular);
+}
+h3 {
+  font: 400 22px/1.5 var(--myriad-pro-regular);
+}
+/* leverages collapsing margins when elements have both top and bottom margin */
+p+h1, p+h2, p+h3, p+h4, p+h5, p+h6,
+ul+h1, ul+h2, ul+h3, ul+h4, ul+h5, ul+h6 { margin-top: 22px; }
+
+/* default anchor tag */
+a {
+    border-bottom: 1px solid transparent;
+    color: var(--standard-link);
+    text-decoration: none;
+}
+a:hover {
+    border-color: var(--standard-link);
+    color: var(--standard-link);
+    text-decoration: none;
+}
+ul, ol {
+  @apply --font_standard;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 0;
+    text-align: left;
+}
+li {
+    margin: 4px 0;
+}

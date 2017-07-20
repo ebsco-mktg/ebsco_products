@@ -1,0 +1,51 @@
+/*
+    ========================================
+        ::root
+    ========================================
+*/
+:root {
+  /* variables */
+  --ebsco-light-blue: rgb( 62, 117, 207 );
+  --ebsco-black: rgb( 69, 69, 69 );
+  --ebsco-salmon: rgb( 223, 91, 87 );
+  --ebsco-salmon-faded: rgba( 223, 91, 87, 0.8 );
+  --standard-link: rgb( 12, 88, 166 );
+  --standard-light-gray: rgb( 224, 224, 224 );
+  --standard-gray: rgb( 195, 195, 195 );
+  --standard-dark-gray: rgb( 138, 138, 138 );
+  --valid-color: rgb( 51, 154, 65 );
+  --myriad-pro-light: "myriad-pro-n3","myriad-pro",Arial,sans-serif;
+  --myriad-pro-regular: "myriad-pro-n4","myriad-pro",Arial,sans-serif;
+
+  /* custom properties */
+  --theme_ebsco-light-blue: {
+    color: rgb( 255, 255, 255 );
+    background: var(--ebsco-light-blue);
+  }
+
+  @custom-media --navigation-breakpoint (min-width: 820px);
+
+  /* font settings */
+  --font_standard: {
+    color: var(--ebsco-black);
+    font: 400 16px/1.5 var(--myriad-pro-regular);
+  }
+  --font_light: {
+    font-weight: 300;
+    font-family: var(--myriad-pro-regular);
+  }
+  --font_regular: {
+    font-weight: 400;
+    font-family: var(--myriad-pro-regular);
+  }
+  --font_semibold: {
+    font-weight: 600;
+    font-family: var(--myriad-pro-regular);
+  }
+  --font_bold: {
+    font-weight: 700;
+    font-family: var(--myriad-pro-regular);
+  }
+
+
+}
