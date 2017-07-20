@@ -1,0 +1,99 @@
+/*
+    ========================================
+        ::container_multi-hero
+    ========================================
+*/
+.container_multi-hero {
+  background-image: url(../img/mobile_Product_Page_white_overlay.png), url( ../img/mobile_Product_Page_image_test.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 0, 50% 0;
+  & h2 {
+    font: 300 36px var(--myriad-pro-regular);
+  }
+}
+
+.container_multi-hero .pipe {
+    font-weight: 300;
+    margin: 0 4px 0 7px;
+}
+
+.product-hero {
+  padding: 50px 0 30px;
+  text-align: center;
+  & .btn-center {
+    display: inline-block;
+    margin: auto;
+    & .btn-target {
+      background: var(--ebsco-salmon);
+      max-width: auto;
+    }
+  }
+}
+
+.full-text-status {
+  background: url(../img/All_icons.png) no-repeat 65px -1894px transparent;
+  padding-right: 20px;
+}
+
+.at-a-glance {
+   background: rgb( 59, 115, 209 );
+  color: rgb( 255, 255, 255 );
+  padding: 50px 0 50px;
+  & .image_header-icon {
+    margin-top: -14px;
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+.at-a-glance .icon-glance img {
+  margin-top: -490px;
+}
+/* at a glance lists */
+.glance-box {
+  display: block;
+  float: left;
+  margin: 0 20px 16px 0;
+  min-width: 40%;
+  & p {
+    margin: 0;
+  }
+}
+
+.glance-box .title {
+    font-style: italic;
+  }
+
+.glance-box .label {
+    margin-right: 10px;
+  }
+
+  .glance-box .value {
+      font-weight: 600
+    }
+  .glance-box .value a {
+      color: rgb(255, 255, 255)
+  }
+  .glance-box .value a:hover {
+      border-color: rgb(255, 255, 255)
+  }
+
+  @media screen and (min-width: 401px) {
+    .container_multi-hero {
+      background-image: url(../img/1280_Product_Page_white_overlay.png), url( ../img/1280_Product_Page_image_test.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: 0 0, 50% 0;
+      & h2 {
+        font: 300 36px var(--myriad-pro-regular);
+      }
+    }
+  }
+@media screen and (--navigation-breakpoint) {
+  .at-a-glance {
+    background: linear-gradient(to bottom, rgba(21, 81, 184, .88), rgba(21, 81, 184, 1) 90%);
+    /* background: rgba( 21, 81, 184, 0.88 ); */
+  }
+  .glance-box {
+      max-width: 50%;
+  }
+}

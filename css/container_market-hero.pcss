@@ -1,0 +1,80 @@
+.container_market-hero {
+  @apply --theme_ebsco-light-blue;
+  padding: 50px 0 30px;
+  text-align: center;
+
+  & .content-hr hr {
+    background: rgb( 255, 255, 255 );
+    margin: 10px 0;
+  }
+
+  & a {
+    color: rgb( 255, 255, 255 );
+    font-weight: 600;
+  }
+
+  & a:hover {
+    border-color: rgb( 255, 255, 255 );
+  }
+
+  & ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+
+    & li {
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+}
+
+.market_academic-libraries .container_market-hero {
+  background: url( ../img/AcademicLibraries.jpg ) 50% 50% / cover no-repeat;
+}
+.market_corporations .container_market-hero {
+  background: url( ../img/Corporations.jpg ) 50% 50% / cover no-repeat;
+}
+.market_government .container_market-hero {
+  background: url( ../img/Government.jpg ) 50% 50% / cover no-repeat;
+}
+.market_public-libraries .container_market-hero {
+  background: url( ../img/Public.jpg ) 50% 50% / cover no-repeat;
+}
+.market_schools .container_market-hero {
+  background: url( ../img/Schools.jpg ) 35% 50% / cover no-repeat;
+}
+.market_high-schools .container_market-hero {
+  background: url( ../img/HighSchool.jpg ) 50% 50% / cover no-repeat;
+}
+.market_middle-schools .container_market-hero {
+  background: url( ../img/MiddleSchool.jpg ) 50% 50% / cover no-repeat;
+}
+.market_elementary-schools .container_market-hero {
+  background: url( ../img/Elementary.jpg ) 50% 50% / cover no-repeat;
+}
+.market_canada-schools .container_market-hero {
+  background: url( ../img/Canada.jpg ) 50% 50% / cover no-repeat;
+}
+.market_australia-new-zealand-schools .container_market-hero {
+  background: url( ../img/AustraliaNZ.jpg ) 50% 50% / cover no-repeat;
+}
+.market_uk-ireland-schools .container_market-hero {
+  background: url( ../img/IrelandUK.jpg ) 50% 50% / cover no-repeat;
+}
+
+@media screen and (min-width: 801px) {
+  .container_market-hero ul {
+    column-count: 2;
+    column-gap: 80px;
+  }
+  .container_market-hero ul li {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1121px) {
+  .container_market-hero ul {
+    column-count: 3;
+    column-gap: 80px;
+  }
+}

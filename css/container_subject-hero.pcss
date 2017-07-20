@@ -1,0 +1,40 @@
+/* header and icon */
+.container_subject-hero .image_header-icon {
+    float: left;
+    margin-top: -16px;
+    transform: scale(0.7);
+}
+.container_subject-hero h1 {
+    font-size: 26px;
+}
+
+.container_subject-hero {
+  @apply --theme_ebsco-light-blue;
+  padding: 50px 0 30px;
+}
+
+.market_academic-libraries .container_subject-hero {
+  background: url( ../img/AcademicLibraries.jpg ) 50% 50% / cover no-repeat;
+}
+.market_corporations .container_subject-hero {
+  background: url( ../img/Corporations.jpg ) 50% 50% / cover no-repeat;
+}
+.market_government .container_subject-hero {
+  background: url( ../img/Government.jpg ) 50% 50% / cover no-repeat;
+}
+.market_public-libraries .container_subject-hero {
+  background: url( ../img/Public.jpg ) 50% 50% / cover no-repeat;
+}
+.market_schools .container_subject-hero {
+  background: url( ../img/Schools.jpg ) 35% 50% / cover no-repeat;
+}
+
+@media screen and (min-width: 801px) {
+  .container_subject-hero .image_header-icon {
+    margin-top: 0;
+    transform: scale(1);
+  }
+  .container_subject-hero h1 {
+    font-size: 44px;
+  }
+}

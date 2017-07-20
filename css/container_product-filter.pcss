@@ -1,0 +1,175 @@
+/*
+    ========================================
+        ::product filter
+    ========================================
+*/
+.container_product-filter {
+  margin-top: 32px;
+  & * {
+    transition: opacity 0.35s ease-in-out;
+  }
+  & .thinking {
+    cursor: progress;
+    opacity: 0.3;
+  }
+}
+
+      /* header and icon */
+.container_product-filter .image_header-icon {
+  float: left;
+  margin-top: -16px;
+  transform: scale(0.7);
+}
+.container_product-filter .image_header-icon ~ h1 {
+  font-size: 26px;
+}
+      /* side filter navigation */
+.container_product-filter .content-sidenav {
+  margin-bottom: 10px;
+  /* max-width: 500px; */
+}
+.container_product-filter .content-sidenav .header_sidemenu > span {
+  color: var(--standard-link);
+  font-style: normal;
+  font-weight: 600;
+}
+.container_product-filter .fnListToggle.triangle:after {
+  border-width: 10px;
+  top: calc(50% - 5px);
+}
+.container_product-filter #level3Nav #schoolsMenuItem,
+.container_product-filter #level3Nav #schoolsMenuItem:hover {
+  border: none;
+  color: inherit;
+  font-style: italic;
+  font-weight: 400;
+  padding-left: 4px;
+  text-decoration: none;
+}
+
+      /* filter form fields */
+.container_product-filter .result-list .content-hr hr {
+  margin: 12px 0 32px;
+}
+
+.container_product-filter .extLink + .product-label {
+  margin-left: 20px;
+}
+.container_product-filter .content-filter {
+  position: relative;
+}
+.container_product-filter .field {
+  /* max-width: 480px; */
+  position: relative;
+
+  & #searchIcon {
+    border: none;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    width: 40px;
+  }
+
+  & #searchIcon:hover {
+    border: none;
+    text-decoration: none;
+  }
+}
+.container_product-filter div.field .search-input {
+  background: url( ../img/search_icon.png ) 99% 10px no-repeat transparent;
+  width: calc(100% - 16px);
+}
+.container_product-filter div.field .search-input:valid {
+  background: url( ../img/x_icon.png ) 99% 10px no-repeat transparent;
+}
+.container_product-filter .fulltext-switch span,
+.container_product-filter .fulltext-switch .checkbox-toggle {
+  display: inline-block;
+}
+.container_product-filter .fulltext-switch span {
+  font-style: italic;
+  margin-right: 10px;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+.container_product-filter .fulltext-switch .checkbox-toggle {
+  margin-top: -8px;
+}
+
+/* loading icon */
+@keyframes spinner {
+  0% { transform:rotate(0deg); }
+  100% { transform:rotate(360deg); }
+}
+#fnLoading {
+  display: none;
+  height: 50px;
+  margin: 16px 0;
+  width: 50px;
+}
+#fn_finder-result-list.thinking ~ #fnLoading {
+  animation: spinner 0.75s linear infinite;
+  display: block;
+}
+
+#fnBackToTop {
+  border: none;
+  display: none;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+}
+#fnBackToTop:hover {
+  border: none;
+  text-decoration: none;
+}
+.blur {
+  filter: blur( 10px );
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 800px) {
+  .container_product-filter .image_header-icon {
+    margin-left: -20px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .container_product-filter .image_header-icon {
+    margin-left: -80px;
+  }
+  .container_product-filter .content-sidenav {
+    margin-top: -80px;
+  }
+  .container_product-filter .content-sidenav .fnListToggle ~ ul {
+    max-height: 470px;
+  }
+  .container_product-filter .content-sidenav .header_sidemenu > span,
+  .container_product-filter .fnListToggle.plus-minus:after,
+  .container_product-filter .fnListToggle.triangle:after {
+    display: none;
+  }
+
+  .container_product-filter .field {
+    margin: 0;
+    width: calc(100% - 200px);
+  }
+  .container_product-filter .fulltext-switch {
+    position: absolute;
+    right: 10px;
+    top: -16px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .container_product-filter .image_header-icon {
+    margin-top: 0;
+    transform: scale(1);
+  }
+  .container_product-filter .image_header-icon ~ h1 {
+    font-size: 44px;
+  }
+}

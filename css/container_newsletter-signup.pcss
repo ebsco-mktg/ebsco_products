@@ -1,0 +1,127 @@
+.container_newsletter-signup,
+.modal_newsletter-signup {
+  margin-top: 100px;
+
+  & form {
+      transition: all 0.5s ease-in-out;
+  }
+
+  & h2 {
+    font-size: 22px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  & .content-icon {
+    border-top: 1px solid var(--standard-light-gray);
+    padding: 20px 0;
+  }
+
+  & .image_header-icon {
+    background: rgb( 255, 255, 255 );
+    left: calc(50% - 90px);
+    max-height: 80px;
+    overflow: hidden;
+    padding: 0 50px;
+    position: absolute;
+    top: -40px;
+
+    & .header-icon {
+      background: rgb( 255, 255, 255 );
+      margin-top: -1985px;
+    }
+  }
+
+  & .field {
+    margin-bottom: 32px;
+  }
+
+  & .checkboxes {
+    overflow: hidden;
+
+    & .checkbox {
+      max-height: 0;
+      margin: 0;
+      opacity: 0;
+      transition: all 0.35s ease-in-out;
+      visibility: hidden;
+
+      & .nl-input {
+        height: 20px;
+        margin: 9px 0;
+        width: 20px;
+      }
+      & .nl-label {
+        cursor: pointer;
+        padding-left: 30px;
+      }
+    }
+    & .fnTrigger {
+      color: var(--standard-link);
+      cursor: pointer;
+      font-weight: 600;
+
+      & .trigger-icon {
+        background: url( ../img/All_icons.png) no-repeat 0 -700px rgb(255, 255, 255);
+        color: transparent;
+        cursor: pointer;
+        display: block;
+        float: left;
+        height: 25px;
+        line-height: 16px;
+        margin-right: 10px;
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+        width: 25px;
+      }
+    }
+  }
+
+  & .checkboxes.active {
+
+    & .checkbox {
+      max-height: 40px;
+      margin: 16px 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & .fnTrigger {
+      & .trigger-icon {
+        background-position: 0 -900px;
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  & .btn-submit {
+
+    & .btn-target {
+      background-color: var(--ebsco-salmon);
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+/* if subject list is immediately preceeded by newsletter signup,
+   reduce the top margin */
+.container_subject-list + .container_newsletter-signup {
+  margin-top: 90px;
+}
+
+
+.modal_newsletter-signup {
+  & .field {
+    margin-bottom: 50px;
+  }
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.market_corporations ~ .modal.active .modal_wrapper,
+.market_academic-libraries ~ .modal.active .modal_wrapper {
+     max-width: 500px;
+     margin: 0 auto;
+}

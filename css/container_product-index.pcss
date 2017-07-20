@@ -1,0 +1,28 @@
+.container_product-index {
+  padding: 50px 0;
+}
+
+.container_product-index .full-text-label {
+  color: var(--standard-dark-gray);
+  font: 400 14px/1.5 var(--myriad-pro-regular);
+  text-transform: uppercase;
+}
+.container_product-index .product-list dt {
+  margin: 0 0 16px;
+}
+.container_product-index .product-list dd {
+  display: none;
+  margin: 0;
+  padding-bottom: 16px;
+}
+.container_product-index .product-list dd > * {
+  display: inline;
+}
+@media screen and (min-width: 721px) {
+  .container_product-index .product-list dd {
+    display: block;
+  }
+  .container_product-index .product-list dt {
+    margin: 0;
+  }
+}
