@@ -1,0 +1,82 @@
+/*
+    ========================================
+        ::Site Breadcrumbs
+    ========================================
+
+    USAGE
+    ========================================
+    Pattern for breadcrumbs
+
+    The below markup is assumed to be used; changing class names will impact css functionality
+
+    Framework is not required
+
+
+    MARKUP:
+    ========================================
+    <section class="container breadbrumb-container">
+        <div class="inner">
+            <div class="content breadcrumb-content size1of1">
+                <p>
+                    <a class="bc_page" href="#home">Home</a>
+                    <span class="bc_separator">&raquo;</span>
+                    <a class="bc_page" href="#level-1">Level 1</a>
+                    <span class="bc_separator">&raquo;</span>
+                    <span class="bc_current">Level 2</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    NOTES:
+    ========================================
+    Does not use framework grid system (can switch from mobile to desktop at any required mediaquery)
+
+    Tested with css normalizing/reset (not included here)
+
+*/
+.breadcrumb-container {
+    background: rgb( 224, 224, 224 );
+}
+.breadcrumb-content p { margin: 16px 0; }
+.breadcrumb-content p,
+.breadcrumb-content a {
+    border: none;
+    color: #969696;
+    font: 400 14px/1.2 var(--myriad-pro-regular);
+    text-decoration: none;
+}
+    .breadcrumb-content a:hover {
+        border: none;
+        text-decoration: underline;
+    }
+.breadcrumb-content .bc_separator {
+    padding: 0 4px;
+}
+.breadcrumb-content .bc_current {
+    color: #525252;
+}
+/* these rules at mobile will have bc display only the parent item */
+.bc_page,
+.bc_separator,
+.bc_page:last-of-type ~ * {
+    display: none;
+}
+.bc_page:last-of-type,
+.bc_mobile {
+    display: initial;
+}
+
+@media screen and (--navigation-breakpoint) {
+    .bc_page,
+    .bc_separator,
+    .bc_page:last-of-type ~ * {
+        display: initial;
+    }
+    .bc_mobile {
+        display: none;
+    }
+    .breadcrumb-content { min-height: 44px; }
+    /* .breadcrumb-content > p { display: none;} */
+}

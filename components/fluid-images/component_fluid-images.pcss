@@ -1,0 +1,42 @@
+/*
+    ========================================
+        ::Fluid Images
+    ========================================
+
+    USAGE
+    ========================================
+    Pattern for scaling images to the width of it's parent regardless of image actual size
+
+    The below markup is assumed to be used; changing class names, ids, or aria properties will impact css and js functionality
+
+    Framework is not required
+
+
+    MARKUP:
+    ========================================
+    <div class="fluid-image">
+        <img alt="image description" class="img" src="some/image/path/image-file.png" />
+        <p class="caption">Description of the image</p>
+    </div>
+
+
+    VARIATIONS:
+    ========================================
+
+
+    NOTES:
+    ========================================
+    Does not use framework grid system (assumes parent has complete control over width)
+
+    The addition of the .caption text is optional
+
+
+*/
+    .fluid-image {}
+    .fluid-image .img { width: 100%; }
+    .fluid-image .caption {
+        font-size: smaller;
+        font-style: italic;
+        text-align: center;
+    }
+/* END Fluid Images */

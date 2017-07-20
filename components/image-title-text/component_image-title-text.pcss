@@ -1,0 +1,94 @@
+/*
+    ========================================
+        ::ITT (imgage, title, text)
+    ========================================
+
+    MARKUP: (optional classes appear in [brackets])
+    ========================================
+    <div class="[content] itt [itt_options] [sizxofy]">
+        <div class="itt_img-wrapper">
+            <img src="http://placekitten.com/100/100" alt="image description">
+        </div>
+        <div class="itt_title-wrapper">
+            title and markup
+        </div>
+        <div class="itt_text-wrapper">
+            text and markup -- blurb, abstract, teaser, whatever
+        </div>
+    </div>
+
+    ITT_OPTIONS ARE:
+
+    itt_stacked         (no floating, elements go on top of each other)
+    itt_img-right   (image floats right -- default is to float left)
+    itt_img-fluid   (requires a percent-width -- see below for default and details)
+    itt_no-wrap         (text does not wrap below image, but acts like a column.
+                         requires a fixed width -- see below for default and details)
+*/
+/* ITT */
+.itt {
+    position: relative;
+}
+.itt_img-wrapper {
+    float: left;
+    overflow: hidden;
+    margin: 0 0.5em 0.5em 0;
+}
+.itt_img-wrapper img, .itt_img-wrapper a {
+    display: block;
+}
+.itt_img-wrapper a:hover {
+  border-color: transparent;
+  text-decoration: none;
+}
+.itt_title-wrapper, .itt_text-wrapper {
+    display: block;
+}
+/* ITT ITT_IMG-RIGHT */
+.itt_img-right .itt_img-wrapper {
+    float: right;
+    margin: 0 0 0.5em 0.5em;
+}
+.itt_stacked .itt_img-wrapper {
+    display: block;
+    float: none;
+}
+/* ITT ITT_IMG-FLUID */
+.itt_img-fluid .itt_img-wrapper {
+    width: 30%;
+}
+.itt_img-fluid .itt_img-wrapper img {
+    width: 100%;
+}
+
+/* ITT ITT_NO-WRAP (Requires fixed width img, defaults to 100px) */
+.itt_no-wrap .itt_title-wrapper, .itt_no-wrap .itt_text-wrapper {
+    margin-left:108px;
+}
+.itt_no-wrap .itt_img-wrapper {
+    margin: 0;
+}
+.itt_no-wrap .itt_img-wrapper img {
+    width: 100px;
+}
+/* ITT ITT_NO-WRAP ITT_IMG-RIGHT (Requires fixed width img, defaults to 100px) */
+.itt_no-wrap.itt_img-right .itt_title-wrapper, .itt_no-wrap.itt_img-right .itt_text-wrapper {
+    margin-left: 0;
+    margin-right: 108px;
+}
+/* ITT ITT_NO-WRAP ITT_IMG-FLUID */
+.itt_no-wrap.itt_img-fluid .itt_img-wrapper {
+    width: 30%;
+}
+.itt_no-wrap.itt_img-fluid .itt_img-wrapper img {
+    width: 100%;
+}
+.itt_no-wrap.itt_img-fluid .itt_title-wrapper, .itt_no-wrap.itt_img-fluid .itt_text-wrapper {
+    margin-left: 32%;
+}
+/* ITT ITT_NO-WRAP ITT_IMG-FLUID ITT_IMG-RIGHT */
+.itt_no-wrap.itt_img-fluid.itt_img-right .itt_title-wrapper, .itt_no-wrap.itt_img-fluid.itt_img-right .itt_text-wrapper {
+    margin-right: 32%;
+    margin-left: 0;
+}
+/* END ITT */

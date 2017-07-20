@@ -1,0 +1,74 @@
+/*
+    ========================================
+        ::image slideshow
+    ========================================
+*/
+
+.image-slideshow {
+  margin: 0;
+  position: relative;
+}
+#slider {
+  overflow: hidden;
+}
+#slider figure img {
+  float: left;
+  width: 10%;
+}
+#slider figure {
+  position: relative;
+  width: 1000%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.image-slideshow_ctrl {
+  display: block;
+}
+.image-slideshow_ctrl .ctrl {
+  border: none;
+  bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  position: absolute;
+  /* 50% of parent MINUS half of icon height MINUS half of control counter display */
+}
+.image-slideshow_ctrl .ctrl:hover {
+  border: transparent;
+  text-decoration: none;
+}
+.image-slideshow_ctrl .ctrl-prev {
+  left: 100px;
+}
+.image-slideshow_ctrl .ctrl-next {
+  right: 100px;
+}
+.image-slideshow_ctrl .counter {
+  font-style: italic;
+  padding: 16px 0;
+  text-align: center;
+}
+@media screen and ( min-width: 721px ) {
+  .image-slideshow_ctrl .ctrl {
+    background: url( ../img/All_icons.png ) no-repeat 0 0 transparent;
+    bottom: initial;
+    color: transparent;
+    height: 80px;
+    position: absolute;
+    /* 50% of parent MINUS half of icon height MINUS half of control counter display */
+    top: calc(50% - 40px - 28px);
+    width: 80px;
+  }
+  .image-slideshow_ctrl .ctrl-prev {
+    background-position: 0 -1590px;
+    left: -100px;
+  }
+  .image-slideshow_ctrl .ctrl-next {
+    background-position: 0 -1490px;
+    right: -100px;
+  }
+
+}

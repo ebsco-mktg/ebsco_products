@@ -1,0 +1,108 @@
+/*
+    ========================================
+        ::Buttons
+        ::Responsive Buttons
+    ========================================
+
+buttons require parent container and target class
+
+ex: <div class="btn (btn-center/right/span)">
+        <a href="#target" class="btn-target">Click Button</a>
+    </div>
+*/
+
+.btn .btn-target {
+    background-color: rgb(6, 42, 101);
+    border: none;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    line-height: 60px;
+    max-width: 320px;
+    padding: 0 40px;
+    text-align: center;
+    text-decoration: none;
+}
+    .btn:hover {
+        text-decoration: none;
+        opacity: .8;
+        transition: all 0.35s ease-in-out 0s;
+    }
+
+.btn.btn-inline .btn-target { display: inline-block; }
+
+.btn-left { float: left; }
+.btn-center { text-align: center; }
+.btn-right { float: right; }
+
+/* button spanning across parent container */
+.btn-full-width .btn-target {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* button with icon
+
+ex: <div class="btn btn-icon">
+        <span class="hide9 hide10 hide12 hide14 hide16">No click on this</span>
+        <span class="hide4 hide6">Click on this</span></a>
+        <a href="#target" class="btn-target">Click Button</a>
+    </div>
+*/
+.btn-icon .btn-target {
+    background: rgb(6, 42, 101) url(https://gobi.ebsco.com/files/images/website/vid-icon.png) no-repeat 90% center;
+    padding: 0 60px 0 30px;
+}
+
+/* hollow buttons */
+.btn.btn-hollow {
+  background: none;
+  border: 1px solid rgb(6, 42, 101);
+}
+.btn.btn-hollow:hover {
+  background: rgba( 255, 255, 255, 0.3 );
+}
+.btn.btn-hollow .btn-target {
+  background: none;
+  color: initial;
+}
+
+/* responsive button, separate pattern, text link at mobile
+ex: <div class="button-responsive">
+        <a href="#target">Click Button
+            <span class="hide9 hide10 hide12 hide14 hide16">Click on this mobile</span>
+            <span class="hide4 hide6">Click on this desktop</span>
+        </a>
+    </div> */
+.button-responsive .btn-target {
+    /* we should let the normal anchor tag color apply */
+    /* color: #000; */
+    font: 18px "myriad-pro-n4", "myriad-pro", sans-serif;
+}
+
+.desktop { display: none; }
+
+@media screen and (min-width: 721px) {
+    .button-responsive .btn-target {
+        background-color: rgb(6, 42, 101);
+        color: #fff;
+        display: inline-block;
+        font: 18px "myriad-pro-n4", "myriad-pro", sans-serif;
+        padding: 20px 40px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .button-responsive:hover {
+        text-decoration: none;
+        opacity: .8;
+        transition: all 0.35s ease-in-out 0s;
+    }
+
+}
+
+@media screen and (min-width: 721px) {
+    .button-responsive .btn-target .mobile { display: none; }
+    .button-responsive .btn-target .desktop { display: block; }
+}
+/*  Buttons  */

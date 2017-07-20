@@ -1,0 +1,88 @@
+/*
+    ========================================
+        ::Side Navigation
+    ========================================
+
+    USAGE
+    ========================================
+    Pattern for sidebar / leftside navigation
+
+    The below markup is assumed to be used; changing class names will impact css functionality
+
+    Framework is used to hide nav at lower widths
+
+
+    MARKUP:
+    ========================================
+    <nav id="level3Nav">
+        <p class="header_sidemenu"><a href="#level2-page-link">Level Two Page</a></p>
+        <ul class="list_sidemenu">
+            <li><a class="nav-link active" href="#level3-page-link">Level Three Page</a></li>
+            <li><a class="nav-link" href="#level3-page-link">Level Three Page</a></li>
+            <li><a class="nav-link" href="#level3-page-link">Level Three Page</a></li>
+        </ul>
+    </nav>
+
+
+    NOTES:
+    ========================================
+    Does not use framework grid system (can switch from mobile to desktop at any required mediaquery)
+
+    Tested with css normalizing/reset (not included here)
+
+*/
+
+#level3Nav {
+    border: 1px solid var(--standard-gray);
+    padding: 0;
+    width: auto;
+}
+#level3Nav .header_sidemenu {
+    background: var(--standard-light-gray);
+    font-style: italic;
+    line-height: 52px;
+    margin: 0;
+    padding: 0 10px;
+}
+#level3Nav .header_sidemenu a {
+    font-weight: 400;
+}
+#level3Nav .header_sidemenu a:hover {
+}
+#level3Nav .list_sidemenu {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+}
+#level3Nav .list_sidemenu li,
+#level3Nav .list_sidemenu li:first-child {
+    display: block;
+    list-style: none;
+    margin: 8px 0;
+    padding: 0;
+}
+#level3Nav .list_sidemenu li input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+#level3Nav .list_sidemenu li a,
+#level3Nav .list_sidemenu li label {
+  color: var(--standard-link);
+  font-weight: 600;
+  text-decoration: none;
+}
+#level3Nav .list_sidemenu li a.current,
+#level3Nav .list_sidemenu li .current + label,
+#level3Nav .list_sidemenu li a:hover,
+#level3Nav .list_sidemenu li label:hover {
+  border-bottom: 1px solid var(--standard-link);
+    text-decoration: none;
+}
+#level3Nav .list_sidemenu li:last-child {
+    border-bottom: 0px;
+}
+#level3Nav .list_sidemenu .list_sidemenu li {
+  font-size: 14px;
+}

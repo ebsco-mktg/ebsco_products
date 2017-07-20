@@ -1,0 +1,49 @@
+.fnListToggle.triangle {
+  display: block;
+  position: relative;
+}
+.fnListToggle.triangle:after {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid var(--standard-gray);
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 10px);
+  transition: all 0.35s ease-in-out;
+  transform-origin: 50% 22%;
+}
+.fnListToggle.triangle.active:after {
+  transform: rotate(180deg);
+  transform-origin: 50% 22%;
+}
+
+.fnListToggle.plus-minus {
+  display: block;
+  position: relative;
+}
+.fnListToggle.plus-minus:after {
+  background: url( ../img/PlusIcon.png ) 0 0 no-repeat;
+  color: var(--standard-link);
+  content: "";
+  font-weight: 600;
+  height: 12px;
+  position: absolute;
+  right: 10px;
+  transition: all 0.35s ease-in-out;
+  width: 12px;
+}
+.fnListToggle.plus-minus.active:after {
+  background: url( ../img/MinusIcon.png ) 0 0 no-repeat;
+  transform: rotate(360deg);
+}
+
+.fnListToggle + ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+.fnListToggle.active + ul {
+  max-height: 470px;
+}

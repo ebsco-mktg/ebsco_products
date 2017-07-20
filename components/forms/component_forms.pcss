@@ -1,0 +1,345 @@
+/*
+    ========================================
+        ::Form Behavior Classes
+    ========================================
+
+    Assumed Markup:
+
+    <form class="form-behavior">
+        <div class="field">
+            <label for="name-id">Your Label</label>
+            <input type="text / email / tel" name="" id="name-id" class="required [optional]" />
+        </div>
+
+        <div class="field radio">
+            <label for="name-id">
+                <input type="radio" id="name-id" />Your Label
+            </label>
+        </div>
+    </form>
+
+    NOTES:
+    form-behavior class required for label fading and validation
+    the 'for' attribute is required to traverse between label and input / textarea
+*/
+div.field {
+    position:relative;
+    margin:0 0 2%;
+    padding:0;
+    border:0;
+}
+
+div.radio {
+    /*height:30px;*/
+    margin:0 0 6px 0;
+}
+
+div.field label {
+    cursor:text;
+}
+
+div.radio label {
+    cursor:pointer;
+}
+
+div.field label {
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index:1;
+    padding:0 1%;
+    line-height:38px;
+    opacity: 1;
+    transition: all 0.35s ease-in-out;
+}
+
+div.radio label {
+    padding: 0 15px 0 0;
+    line-height:30px;
+    transition:background .2s ease-out;
+    -moz-transition:background .2s ease-out;
+    -webkit-transition:background .2s ease-out;
+    -ms-transition:background .2s ease-out;
+    -o-transition:background .2s ease-out;
+}
+
+/* a group of radio buttons displayed vertically */
+div.radio-group {
+    height: auto;
+}
+div.radio-group label {
+    float: left;
+    margin-left: 16px;
+    position: relative;
+}
+div.radio-group input[type="radio"] {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+div.field input[type=text],
+div.field input[type=password],
+div.field input[type=email],
+div.field input[type=tel],
+div.field textarea {
+    width:98%;
+    height:40px;
+    line-height:32px;
+    margin:0;
+    padding:0 8px;
+    border:0px;
+    background:#fff;
+    outline: 1px solid rgb(154,154,154);
+    transition:background .2s ease-out;
+    -moz-transition:background .2s ease-out;
+    -webkit-transition:background .2s ease-out;
+    -ms-transition:background .2s ease-out;
+    -o-transition:background .2s ease-out;
+}
+
+div.field input[type=email]:invalid,
+div.field input[type=email]:-moz-ui-invalid {
+    outline:0px none;
+    box-shadow:none;
+}
+
+div.field input[type=radio] {
+    float:left;
+    height:30px;
+    margin:0 5px 0 0;
+}
+
+div.field input[type=file] {
+    display:none;
+    visibility:hidden;
+}
+
+textarea {
+    width:98%;
+    padding:7px 1%;
+    line-height:26px;
+    border:0;
+    resize: vertical;
+}
+div.select {
+    overflow: hidden;
+}
+div.select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    background-image:
+      url( /files/img/newslettertriangle.png ),
+      linear-gradient(90deg, #ccc 1px, transparent 1px);
+    background-position:
+      calc(100% - 15px) calc(100% - 16px),
+      100% 0;
+    background-size:
+      10px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+    border: 1px solid #a9a7a7;
+    box-sizing: border-box;
+    display: inline-block;
+    font: inherit;
+    height: 40px;
+    line-height: 40px;
+    margin: 4px 0 16px;
+    padding: 0 3.5em 0 1%;
+    width: 100%;
+}
+/* removes IE Edge select arrow */
+div.select select::-ms-expand {
+    display: none;
+}
+
+/* div.select select {
+    -moz-appearance: none;
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid rgb(154, 154, 154);
+    padding: 0 0 0 1%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+} */
+div.select select.disabled {
+    background: rgb(154,154,154);
+}
+div.select.disabled select {
+    color: rgb(153, 153, 153) !important;
+}
+.js div.select.disabled select option {
+    display: none;
+}
+div.select.disabled:hover span, div.select span {
+    background: none repeat scroll 0 0 rgb( 255, 255, 255 );
+    color: rgb( 154, 154, 154 );
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 40px;
+}
+/* div.select:hover span {
+    background: none repeat scroll 0 0 rgb(18,68,151);
+} */
+option:checked {
+    /*background: rgb(40, 76, 105);*/
+}
+
+/*** form labels (new version of framework) ***/
+
+/* select {
+    width: 100%;
+    height: 40px;
+    line-height: 32px;
+    / removes browser dropdown arrow /
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+/ removes browser dropdown arrow /
+select::-ms-expand {
+    display: none;
+} */
+    select option {
+        /*height: 40px;
+        line-height: 40px;*/
+        font-size: 14px;
+    }
+
+div.checkbox {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+    .form-behavior div.field.checkbox label {
+        cursor: default;
+        /* line-height: 30px; */
+        padding-left: 16px;
+    }
+div.field textarea {
+    height: 192px;
+}
+
+@media screen and (min-width: 721px) {
+    select option {
+        /*height: 40px;
+        line-height: 40px;*/
+        font-size: 16px;
+    }
+
+}
+
+/* interaction classes */
+
+div.field label.hasValue {
+    opacity: 0.3;
+}
+div.field label.hasValue.hasBlur {
+    opacity: 0;
+    /*left: auto;
+    right: 0;*/
+}
+
+input.error { outline: #FF2E2E solid 2px!important; }
+
+.error { background: #FF9494!important; }
+
+/* .btnSubmit {
+    background-color: rgb(223, 91, 87);
+    border: 0;
+    color: #fff;
+    display: inline-block;
+    font: 18px "myriad-pro-n4", "myriad-pro", sans-serif;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100%;
+}
+    .btnSubmit:hover {
+        text-decoration: none;
+        opacity: .8;
+        transition: all 0.35s ease-in-out 0s;
+    } */
+
+        /* 'responsive' form fields */
+        .field-stack div.field {
+            width: 100%;
+        }
+
+        /* IE fallback */
+        .lt-ie9 .field-stack {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+            .lt-ie9 .field-stack div.field {
+                display: block;
+                width: 49%;
+                margin-top: 40px;
+                margin-right: 2%;
+                float: left;
+                clear: left;
+            }
+
+            .lt-ie9 .field-stack div.field.n2 {
+                clear: none;
+                margin-right: 0;
+            }
+            .lt-ie9 .field-stack div.radio,
+            .lt-ie9 .field-stack div.checkbox,
+            .lt-ie9 .field-stack div.radio.n2,
+            .lt-ie9 .field-stack div.checkbox.n2 {
+                margin-top: 0;
+            }
+            .lt-ie9 .field-stack div.field:nth-of-type(2n) {
+                margin-right: 0;
+                clear: none;
+            }
+
+
+        @media screen and (min-width: 801px) {
+            .push-label .results.active {
+                top: auto;
+                right: 10px;
+                width: auto;
+                overflow: auto;
+            }
+            .field-stack div.field {
+                width: 49%;
+                margin-right: 2%;
+                float: left;
+                clear: left;
+            }
+            .field-stack div.field:nth-of-type(2),
+            .field-stack div.field.single:nth-of-type(2),
+            .field-stack div.field.n2 {
+                /*margin-top: 32px;*/
+                clear: none;
+            }
+            .field-stack div.radio:nth-of-type(2),
+            .field-stack div.checkbox:nth-of-type(2),
+            .field-stack div.radio.n2,
+            .field-stack div.checkbox.n2 {
+                margin-top: 0;
+            }
+            .field-stack div.field:nth-of-type(2n) {
+                margin-right: 0;
+                clear: none;
+            }
+
+            .field-stack div.field.suppress-margin {
+                margin-top: 0;
+            }
+            .field-stack div.field.textarea textarea {
+                height: 92px;
+            }
+
+        }

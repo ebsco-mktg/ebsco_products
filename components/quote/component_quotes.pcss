@@ -1,0 +1,55 @@
+/*
+    ========================================
+        ::Quotes
+    ========================================
+
+
+<blockquote class="quote">
+    <p class="quote-text">You are without a doubt our favorite vendor rep! It has been comforting to know that any time I have a question, you are readily available to help me out. GOBI Library Solutions is the only vendor we use that actually saves us money.”</h4>
+    <p class="quote-attribution">Lea Curry, Head of Content Development, University of Kansas Libraries</p>
+</blockquote>
+*/
+.content-quote {
+  background: rgb( 224, 224, 224);
+  padding: 20px 0px;
+  margin-top: 30px;
+  position: relative;
+}
+.quote {
+  outline: 1px solid var(--ebsco-light-blue);
+  padding: 20px;
+}
+.quote::before {
+  background: url(../img/All_icons.png) no-repeat 6px -800px var(--standard-light-gray);
+    content: " ";
+    display: block;
+    height: 30px;
+    left: 80px;
+    position: absolute;
+    top: 24px;
+    width: 50px;
+}
+
+.quote .quote-text,
+.quote .quote-attribution {
+  margin: auto;
+  max-width: 640px;
+}
+.quote .quote-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.quote .quote-attribution {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 16px;
+    text-align: center;
+}
+
+@media screen and (min-width:801px) {
+  .quote .quote-text {
+      font-size: 22px;
+  }
+}
+/*  END Quotes  */

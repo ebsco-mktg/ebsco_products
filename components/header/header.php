@@ -1,0 +1,3 @@
+<h1 id="ariaPageTitle">Subject Title</h1>
+<!--<p>Subject description: Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>-->
+<p>Providing indexing and full-text coverage of the most respected scholarly law journals, Legal Source is the authoritative database for current issues, studies, thoughts and trends of the legal world. It is an excellent resource for attorneys, educators, business people, law librarians, students, paralegals and others involved with the law.</p>

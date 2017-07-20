@@ -1,0 +1,53 @@
+/*
+    ========================================
+        ::Lists
+    ========================================
+
+    USAGE
+    ========================================
+    Pattern for lists (unordered, ordered, definition lists)
+
+    Default styles exist, therefore markup generally can be simplified element markup.
+    However, class names are available to provide optional displays.
+
+    Framework is not required
+
+
+    MARKUP:
+    ========================================
+    <ul|ol class="[leading-zero]">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ul|ol>
+
+
+    VARIATIONS:
+    ========================================
+    leading-zero : in ordered lists, adds a leading zero
+
+    NOTES:
+    ========================================
+
+*/
+
+ol.leading-zero {
+    list-style-position: inside;
+    list-style-type: decimal-leading-zero;
+    padding: 0;
+}
+ol.leading-zero li {
+    margin-bottom: 16px;
+}
+
+/* NO BULLETS */
+ul.list_no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    margin: 0 0 16px 0;
+    padding: 0;
+  }
+}
